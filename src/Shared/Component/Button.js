@@ -11,6 +11,7 @@ export const BlueButton = ({
   fontSize = moderateScale(12),
   textColor = 'black',
   disabled = false,
+  style,
 }) => {
   return (
     <TouchableOpacity
@@ -19,12 +20,13 @@ export const BlueButton = ({
       activeOpacity={0.8}
       style={{
         width: widthPercentageToDP(92),
-        borderRadius: moderateScale(4),
+        borderRadius: moderateScale(6),
         backgroundColor: disabled ? Color.lightBlue : Color.blue,
         alignItems: 'center',
         justifyContent: 'center',
         height: moderateScale(40),
         marginBottom: moderateScale(20),
+        ...style,
       }}>
       <Poppins title={title} size={fontSize} color={textColor} />
     </TouchableOpacity>

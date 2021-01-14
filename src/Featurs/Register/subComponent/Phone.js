@@ -1,13 +1,8 @@
 import React from 'react';
-import {View, Text, TextInput} from 'react-native';
+import {View, TextInput} from 'react-native';
 import Poppins from '../../../Shared/Component/Poppins';
 import {moderateScale} from 'react-native-size-matters';
 import {PhoneStyle} from './style';
-import {
-  ScrollView,
-  TouchableWithoutFeedback,
-} from 'react-native-gesture-handler';
-import {Keyboard} from 'react-native';
 import {BlueButton} from '../../../Shared/Component/Button';
 import {widthPercentageToDP} from 'react-native-responsive-screen';
 

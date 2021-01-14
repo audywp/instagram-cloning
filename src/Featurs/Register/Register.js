@@ -106,22 +106,6 @@ export default function Register(props) {
         <RenderTopContainer />
         <RenderTabBar />
         <RenderTabComponent />
-
-        <View style={RegisterStyle.Footer}>
-          <Poppins
-            title="Already have an account ?"
-            color="#9CADB3"
-            size={moderateScale(12)}
-            style={{marginRight: moderateScale(5)}}
-          />
-          <TouchableOpacity onPress={navigateToLogin}>
-            <Poppins
-              title="Login"
-              color={Color.blue}
-              size={moderateScale(12)}
-            />
-          </TouchableOpacity>
-        </View>
       </View>
     </ScrollView>
   );

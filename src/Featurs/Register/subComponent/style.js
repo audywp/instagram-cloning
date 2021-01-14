@@ -13,7 +13,7 @@ export const PhoneStyle = StyleSheet.create({
     borderWidth: 1,
     borderColor: '#9CADB3',
     paddingHorizontal: moderateScale(12),
-    borderRadius: moderateScale(4),
+    borderRadius: moderateScale(6),
   },
   codeContainer: {
     borderRightWidth: 1,

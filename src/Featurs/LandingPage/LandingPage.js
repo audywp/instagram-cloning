@@ -13,11 +13,11 @@ import {BlueButton} from '../../Shared/Component/Button';
 
 export default function LandingPage(props) {
   const actionCreateUser = () => {
-    props.navigation.navigate('Register');
+    props.navigation.push('Auth', {screen: 'Register'});
   };
 
   const actionLogin = () => {
-    props.navigation.navigate('Login');
+    props.navigation.push('Auth', {screen: 'Login'});
   };
 
   return (
