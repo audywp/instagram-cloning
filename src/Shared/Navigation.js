@@ -1,3 +1,4 @@
+/* eslint-disable react-hooks/exhaustive-deps */
 import React, {useState} from 'react';
 import {View, TouchableOpacity} from 'react-native';
 import {createStackNavigator} from '@react-navigation/stack';
@@ -11,6 +12,12 @@ import {Color} from './Utils/Color';
 import {moderateScale} from 'react-native-size-matters';
 import {RegisterStyle} from '../Featurs/Register/style';
 import {BackHandler} from 'react-native';
+import {connect} from 'react-redux';
+import {LoginAsAnonymous} from '../Store/globalAction';
+
+const mapStateToProps = (state) => ({});
+
+const mapDispatchToProps = {LoginAsAnonymous};
 
 const Stack = createStackNavigator();
 
@@ -72,7 +79,13 @@ const AuthenticationStack = ({navigation, route}) => {
   );
 };
 
-export default function Navigation() {
+export default connect(
+  mapStateToProps,
+  mapDispatchToProps,
+)(function Navigation(props) {
+  React.useEffect(() => {
+    props.LoginAsAnonymous();
+  }, []);
   return (
     <Stack.Navigator initialRouteName="LandingPage">
       <Stack.Screen
@@ -87,4 +100,4 @@ export default function Navigation() {
       />
     </Stack.Navigator>
   );
-}
+});

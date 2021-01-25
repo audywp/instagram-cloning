@@ -10,6 +10,7 @@ target 'ig' do
 
   pod 'RNVectorIcons', :path => '../node_modules/react-native-vector-icons'
 
+
   target 'igTests' do
     inherit! :complete
     # Pods for testing
